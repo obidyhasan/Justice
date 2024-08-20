@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,11 @@
               fontFamily: {
                 'poppins' : 'Poppins',
                 'garamond' : 'EB Garamond',
-              }
+              },
+              backgroundImage: (theme) => ({
+        
+                'hero-bg': "linear-gradient(to top, rgb(17, 17, 17),rgba(17, 17, 17, 0)), url('./images/banner.png')",
+                }),
             }
           }
         }
@@ -37,12 +41,76 @@
 <body class="font-poppins">
     
     <!-- Navbar Section -->
-    <section>
-        <nav></nav>
+    <section class="sticky top-0">
+        <nav class="max-w-7xl mx-auto px-4 py-5 bg-white">
+
+            <div class="navbar">
+
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+
+                      <li><a>Home</a></li>
+                      <li><a>Services</a></li>
+                      <li><a>Cases</a></li>
+                      <li><a>Blog</a></li>
+                      <li><a>Contact Us</a></li>
+                      
+                    </ul>
+                  </div>
+                  <a class="cursor-pointer"><img class="w-10/12" src="./images/logo2.png" alt=""></a>
+                </div>
+
+
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1 font-medium text-gray-500">
+
+                    <li><a>Home</a></li>
+                    <li><a>Services</a></li>
+                    <li><a>Cases</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact Us</a></li>
+
+                  </ul>
+                </div>
+
+
+                <div class="navbar-end">
+                  <a class="btn bg-primary-color hover:bg-primary-color text-white rounded-md">Free Consultation</a> 
+                </div>
+              </div>
+        </nav>
     </section>
 
     <!-- Hero Section -->
-    <header></header>
+    <header class="max-w-7xl mx-auto px-6">
+        <section class="bg-hero-bg bg-cover bg-center bg-no-repeat rounded-md">
+            <div class="py-20 max-w-xl mx-auto text-white text-center">
+                <h1 class="font-garamond text-6xl font-extrabold leading-tight">We Provide Effective Legal Solutions</h1>
+                <p class="text-sm text-gray-300 my-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                <div class="join w-full space-x-4">
+                    <input class="input input-bordered rounded-md w-full text-gray-600 placeholder:text-sm" type="text" placeholder="Search your services" />
+                    <button class="btn rounded-md bg-primary-color border-none text-white hover:bg-primary-color">Subscribe</button>
+                  </div>
+            </div>
+        </section>
+    </header>
 
     <!-- Main Section -->
     <main></main>
